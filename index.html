@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contrate o seu Site</title>
+    <title>SeuSite | Siti Web Premium per Ristoranti e Bar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -13,57 +13,84 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <header class="gml-header">
+        <div class="header-container">
+            <div class="logo">SeuSite</div>
+            <a href="https://wa.me/5524988650486" target="_blank" class="btn-whatsapp-header">
+                Richiedi Preventivo
+            </a>
+        </div>
+    </header>
+
     <div class="canvas-container">
         <canvas id="hero-canvas"></canvas>
         <div class="overlay"></div>
     </div>
 
+    <!-- Glassmorphism gradient effect -->
+    <div class="bg-blur-gradient"></div>
+
     <section class="hero" id="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Contrate o seu Site</h1>
-            <p class="hero-subtitle">A experiência visual definitiva para impulsionar suas conversões e encantar seus usuários. Design premium, performance absoluta.</p>
-            <a href="#features" class="btn-primary">Descubra o Futuro</a>
+            <h1 class="hero-title">Siti Web che Portano Clienti.</h1>
+            <p class="hero-subtitle">Il design definitivo per ristoranti, pizzerie e bar in Italia. Aumenta le tue prenotazioni con una presenza online premium e veloce.</p>
+            <a href="https://wa.me/5524988650486" target="_blank" class="btn-primary pulse-btn">Contattaci su WhatsApp</a>
         </div>
     </section>
 
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Design Sem Limites</h2>
+            <h2 class="section-title">Design Senza Limiti</h2>
             <div class="cards-grid">
                 <div class="glass-card">
-                    <div class="icon">✨</div>
-                    <h3>Estética Premium</h3>
-                    <p>Inspirado nas gigantes do Vale do Silício. Interfaces polidas, tipografia refinada e atenção meticulosa aos detalhes.</p>
+                    <div class="icon">🍕</div>
+                    <h3>Focalizzato sulla Gastronomia</h3>
+                    <p>Design su misura per mostrare il tuo menù, l'atmosfera del tuo locale e facilitare le prenotazioni dei clienti.</p>
                 </div>
                 <div class="glass-card" style="margin-top: 2rem;">
-                    <div class="icon">🚀</div>
-                    <h3>Performance Absoluta</h3>
-                    <p>Animações fluidas a 60 FPS, pré-carregamento inteligente de assets e otimização máxima para renderização.</p>
+                    <div class="icon">⚡</div>
+                    <h3>Prestazioni Assolute</h3>
+                    <p>Siti super veloci, ottimizzati per smartphone. I tuoi clienti non aspetteranno per vedere il tuo menù.</p>
                 </div>
                 <div class="glass-card" style="margin-top: 4rem;">
-                    <div class="icon">📱</div>
-                    <h3>Responsivo por Padrão</h3>
-                    <p>Experiência perfeita em qualquer dispositivo, do menor smartphone ao maior monitor ultrawide.</p>
+                    <div class="icon">💶</div>
+                    <h3>Più Fatturato</h3>
+                    <p>Un sito professionale trasmette fiducia, attira più turisti e clienti locali, aumentando i tuoi guadagni in Euro.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="showcase">
+    <!-- FAQ / Services (Accordion) -->
+    <section class="accordion-section">
         <div class="container">
-            <div class="showcase-content">
-                <div class="text-block">
-                    <h2 class="section-title">Imersão 3D no Browser</h2>
-                    <p>O scroll controla o tempo. Através de renderização via Canvas e manipulação precisa com GSAP ScrollTrigger, transformamos interações simples em narrativas cinematográficas de tirar o fôlego.</p>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h4>72</h4>
-                        <span>Frames Otimizados</span>
+            <div class="accordion-wrapper">
+                <h2 class="section-title">Domande Frequenti</h2>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Quanto costa un sito web? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Offriamo pacchetti accessibili per piccole e medie imprese. Il prezzo varia in base alle funzionalità necessarie (es. menù digitale, sistema di prenotazione).</p>
                     </div>
-                    <div class="stat-card">
-                        <h4>60</h4>
-                        <span>FPS Garantidos</span>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Quanto tempo ci vuole per la consegna? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Il tuo sito premium sarà online in 7-14 giorni lavorativi dopo aver ricevuto tutte le informazioni sul tuo ristorante o bar.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Il sito funziona bene sui cellulari? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Assolutamente sì. Oltre l'80% delle ricerche per ristoranti avviene da smartphone. Il tuo sito sarà 100% responsive e ottimizzato.</p>
                     </div>
                 </div>
             </div>
@@ -73,12 +100,26 @@
     <section class="cta-section">
         <div class="container">
             <div class="glass-panel">
-                <h2>Pronto para elevar seu nível?</h2>
-                <p>Junte-se às startups que estão redefinindo o design digital hoje mesmo.</p>
-                <a href="#" class="btn-secondary">Começar Agora</a>
+                <h2>Pronto a riempire il tuo locale?</h2>
+                <p>Unisciti ai ristoratori che stanno rivoluzionando la loro presenza digitale oggi stesso.</p>
+                <a href="https://wa.me/5524988650486" target="_blank" class="btn-whatsapp-large pulse-btn">Parla con noi su WhatsApp</a>
             </div>
         </div>
     </section>
+
+    <!-- GML Style Marquee Footer -->
+    <footer class="marquee-footer">
+        <div class="marquee-content">
+            <span>🚀 SITI WEB PER RISTORANTI E BAR</span>
+            <span>✨ AUMENTA LE TUE PRENOTAZIONI</span>
+            <span>📱 DESIGN RESPONSIVO</span>
+            <span>💶 FATTURA DI PIÙ</span>
+            <span>🚀 SITI WEB PER RISTORANTI E BAR</span>
+            <span>✨ AUMENTA LE TUE PRENOTAZIONI</span>
+            <span>📱 DESIGN RESPONSIVO</span>
+            <span>💶 FATTURA DI PIÙ</span>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
