@@ -21,14 +21,8 @@ for (let i = 0; i < frameCount; i++) {
   img.src = currentFrame(i);
   img.onload = () => {
     imagesLoaded++;
-    if (i === 0) {
-        // Render first frame specifically when it's ready
-        render();
-    }
-    if (imagesLoaded === frameCount) {
-        // Just to ensure a final render pass when everything finishes
-        render();
-    }
+    if (i === 0) render();
+    if (imagesLoaded === frameCount) render();
   };
   images.push(img);
 }
@@ -43,12 +37,9 @@ window.addEventListener("resize", resize);
 resize();
 
 function render() {
-    // Avoid drawing if image isn't loaded
     if (!images[laptop.frame] || !images[laptop.frame].complete) return;
     
     const img = images[laptop.frame];
-    
-    // Scale logic to make the image cover the canvas, centered
     const canvasRatio = canvas.width / canvas.height;
     const imgRatio = img.width / img.height;
     
@@ -79,12 +70,12 @@ gsap.to(laptop, {
     trigger: document.documentElement,
     start: "top top",
     end: "bottom bottom",
-    scrub: 1.2 // smooth scrubbing factor for cinematic feel
+    scrub: 1.2
   },
   onUpdate: render
 });
 
-// 2) Hero Texts Parallax (Fading and moving up as you scroll down)
+// 2) Hero Texts Parallax
 gsap.to('.hero-title', {
     y: -120,
     opacity: 0,
@@ -137,17 +128,21 @@ gsap.utils.toArray('.glass-card').forEach((card, i) => {
     });
 });
 
-// 4) Showcase Stats Entrance
-gsap.from('.stat-card', {
-    scrollTrigger: {
-        trigger: '.stats-grid',
-        start: "top 85%"
-    },
-    x: 60,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: "power2.out"
+// 4) Accordion Logic
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    header.addEventListener('click', () => {
+        // Close other items
+        accordionItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+            }
+        });
+        // Toggle current
+        item.classList.toggle('active');
+    });
 });
 
 // 5) CTA Panel entrance
